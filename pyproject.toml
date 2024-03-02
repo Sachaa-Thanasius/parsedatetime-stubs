@@ -24,15 +24,9 @@ classifiers = [
     "Typing :: Typed",
 ]
 
-[project.optional-dependencies]
-dev = ["black", "ruff", "pre-commit"]
-
 [project.urls]
 Repository = "https://github.com/Sachaa-Thanasius/parsedatetime-stubs"
 Issues = "https://github.com/Sachaa-Thanasius/parsedatetime-stubs/issues"
-
-[tool.setuptools]
-include-package-data = true
 
 [tool.ruff]
 include = ["parsedatetime/*"]
@@ -82,6 +76,16 @@ ignore = [
     "PLR0913", # Some functions require more than 5 arguments.
     "ANN101",  # Type of Self for self is implicit.
     "ANN401",  # Use of Any in function signatures is a known quantity.
+    # Recommended by Ruff when using Ruff format.
+    "E111",
+    "E114",
+    "E117",
+    "Q003",
+    "COM812",
+    "COM819",
+    # "E501",
+    "ISC001",
+    "ISC002",
 ]
 unfixable = [
     "ERA", # I don't want anything erroneously detected deleted by this.
